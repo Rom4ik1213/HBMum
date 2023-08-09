@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Поздравление с Днем Рождения!</title>
+    
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%; /* Адаптировано для мобильных устройств */
+        max-width: 400px; /* Максимальная ширина для больших экранов */
+        display: block; /* Убирает нежелательные отступы вокруг изображений */
+        margin: 0 auto; /* Центрирует изображения */
+        border-radius: 50%; /* Добавлено для закругления углов */
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px; /* Уменьшено для мобильных устройств */
+        position: relative;
+    }
+
+    .image-container {
+        margin-top: 10px; /* Уменьшено для мобильных устройств */
+    }
+
+    h1 {
+        color: #333;
+        font-size: 24px; /* Увеличено для мобильных устройств */
+    }
+
+    p {
+        color: #666;
+        margin-top: 10px; /* Уменьшено для мобильных устройств */
+        font-size: 18px; /* Увеличено для мобильных устройств */
+    }
+
+    @keyframes birthdayAnimation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .container h1 {
+        animation: birthdayAnimation 3s infinite;
+    }
+
+    .balloon {
+        position: absolute;
+        width: 25px; /* Уменьшено для мобильных устройств */
+        height: 50px; /* Уменьшено для мобильных устройств */
+        background-color: #FF6384;
+        border-radius: 50% 50% 60% 60%;
+        animation: balloonAnimation 4s infinite ease-in-out, moveUpDown 6s infinite;
+    }
+
+    @keyframes balloonAnimation {
+        0%, 100% { transform: translateY(0) scale(0.9); }
+        50% { transform: translateY(-100vh) scale(1.2); } /* Уменьшено для мобильных устройств */
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% { top: -50px; } /* Уменьшено для мобильных устройств */
+        50% { top: 50vh; } /* Уменьшено для мобильных устройств */
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>С Днем Рождения! Дорогая Мамочка!</h1>
+        <div class="image-container">
+            <img src="assets/IMG_20211229_124811.jpg" alt="Фото мамы">
+            <img src="assets/IMG_20220106_145928.jpg" alt="Фото мамы">
+        </div>
+        <p>Пусть этот день будет полон счастья и радости! </p>
+        <div class="balloon" style="top: -10px; left: 20%;"></div>
+        <div class="balloon" style="top: -30px; left: 40%;"></div>
+        <div class="balloon" style="top: -5px; left: 60%;"></div>
+        <div class="balloon" style="top: -40px; left: 80%;"></div>
+        <!-- Добавьте еще шаров по аналогии -->
+    </div>
+</body>
+</html>
